@@ -1,26 +1,32 @@
-class Person(object):
-    # __init__ is known as the constructor
-    def __init__(self, name, idnumber):
+class Cat:
+    def __init__(self,name,age):
         self.name = name
-        self.idnumber = idnumber
+        self.age =  age 
+    
+    def info(self):
+        print(f"I am Cat .My name is {self.name}. I am {self.age} years old" )
 
-    def display(self):
-        print(self.name)
-        print(self.idnumber)
-
-
-# child class
-class Employee(Person):
-    def __init__(self, name, idnumber, salary, post):
-        self.salary = salary
-        self.post = post
-
-        # invoking the __init__ of the parent class
-        Person.__init__(self, name, idnumber)
+    def sound(self):
+        print("Meow")
 
 
-# creation of an object variable or an instance
-a = Employee("Penguin", 20210401, 15000, "Intern")
 
-# calling a function of the class Person using its instance
-a.display()
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am Dog .My name is {self.name}. I am {self.age} years old")
+
+    def sound(self):
+        print("Bark")
+
+
+cat1 = Cat("Tyson",2.5)
+dog1 = Dog("Tommy",7)
+
+
+for animal in (cat1,dog1):
+    animal.sound()
+    animal.info()
