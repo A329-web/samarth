@@ -1,45 +1,19 @@
-# import necessary packages
-from abc import ABC, abstractmethod
+from tkinter import *
 
+window= Tk()
+window.title("codingal")
+window.geometry("300x300")
 
-# create a base class
-class Animal(ABC):
-    # abstract method
-    # should be implemented by all sub-classes
-    def move(self):
-        pass
+g = Label(text="Hello User",fg="black",bg="orange")
+g.pack()
 
+b = Button(text="Click Me",bg="black",fg="white")
+b.pack()
 
-# sub classes
-class Human(Animal):
-    def move(self):
-        print("I can walk and run")
+e = Entry(width=50)
+e.pack()
 
+f = Frame(master=window,borderwidth=5)
+f.pack()
 
-class Snake(Animal):
-    def move(self):
-        print("I can crawl")
-
-
-class Dog(Animal):
-    def move(self):
-        print("I can bark")
-
-
-class Lion(Animal):
-    def move(self):
-        print("I can roar")
-
-
-# Driver code
-R = Human()
-R.move()
-
-K = Snake()
-K.move()
-
-R = Dog()
-R.move()
-
-K = Lion()
-K.move()
+window.mainloop()
